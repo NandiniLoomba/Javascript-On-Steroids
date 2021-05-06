@@ -1,7 +1,7 @@
 # Javascript-On-Steroids
 
 This is a mini project where i tried to use different javascipt concepts in order to strengthen my javascript knowledge.
-I used javascript promises, asynchronous await, dom manipulation and many other different concepts.
+I have used javascript promises, asynchronous await, dom manipulation and many other different concepts.
 
 This project has 5 different challenges:
 1. Your age in days
