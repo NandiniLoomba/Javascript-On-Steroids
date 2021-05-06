@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Games on Fire</title>
+</head>
+<body>
+ 
+    <div class="mt-5 col-md-12"></div>
+
+
+   <!-- CHALLENGE 1 -->
+
+    <div class="Container-1">
+        <div class="row border border-2 border-dark p-5"><h2 class="d-flex justify-content-evenly"> Challenge 1 : Your age in days</h2></div>
+        <div class="row border border-2 border-dark p-4 "> 
+            <div class="d-flex justify-content-evenly">
+            <button  class="btn btn-primary" onclick="AgeInDays()">Click Me</button>
+            <button  class="btn btn-danger" onclick="reset()">Reset</button>
+            </div>
+        </div>
+        <div class="row border border-2 border-dark p-5">
+            <h1 id="res"></h1>
+        </div>
+    </div>
+
+    <div class="mt-5 col-md-12"></div>
+
+
+    <!-- CHALLENGE 2 -->
+
+    <div class="Container-2">
+        <div class="row border border-2 border-dark p-5"><h2 class="d-flex justify-content-evenly"> Challenge 2: Cat generator</h2></div>
+        <div class="row border border-2 border-dark p-4 ">
+            <div class="d-flex justify-content-evenly">
+            <button  class="btn btn-success" onclick="beautiful_Cats()">Generate Cat</button>
+            </div>
+        </div>
+        <div class="row border border-2 border-dark p-5">
+            <!-- <h1 id="res"></h1> -->
+            <div id="cat-img">
+            
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-5 col-md-12"></div>
+    
+
+    <!-- CHALLENGE 3 -->
+
+    <div class="Container-3">
+        <div class="row border border-2 border-dark p-5"><h2 class="d-flex justify-content-evenly"> Challenge 3: Stone Paper Scissor</h2></div>
+        <div  class="row border border-2 border-dark p-5">
+           <div id="fav-game">
+             <div  id="scissor-div"><img id="scissor" src="Images/scissors.jpg" style="width: 250px; height: 200px;" onclick="sps(this)"></div>
+             <div id="paper-div"><img id="paper" src="Images/paper.jpg" style="width: 250px; height: 200px;" onclick="sps(this)"></div>
+             <div id="stone-div"><img id="stone" src="Images/stone.jpeg" style="width: 250px; height: 200px;" onclick="sps(this)"></div>
+          
+           </div>
+
+        </div>
+
+    </div>
+
+    <div class="mt-5 col-md-12"></div>
+   
+   <!-- CHALLENGE 4  -->
+   
+    <div id="clause" class="Container-4">
+        <div class="row border border-2 border-dark p-5"><h2 class="d-flex justify-content-evenly"> Challenge 4: Change the color of all buttons</h2></div>
+        <div class="row border border-2 border-dark p-4 "> 
+        <div class="d-flex justify-content-evenly">
+        
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a id="blue" class="dropdown-item" onclick="change_colors(this)" href="#clause">Blue</a></li>
+              <li><a id="yellow" class="dropdown-item" onclick="change_colors(this)" href="#clause">Yellow</a></li>
+              <li><a id="green" class="dropdown-item" onclick="change_colors(this)" href="#clause">Green</a></li>
+              <li><a id="random" class="dropdown-item" onclick="change_colors(this)" href="#clause">Random</a></li>
+              <li><a id="reset" class="dropdown-item" onclick="change_colors(this)" href="#clause">Reset</a></li>
+              
+            </ul>
+        </div>
+        <button  class="btn btn-warning" >Google</button>
+        <button  class="btn btn-danger" >Amazon</button>
+        <button  class="btn btn-info" >Apple</button>
+        <button  class="btn btn-success" >IAS</button>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="mt-5 col-md-12"></div>
+
+    <!-- CHALLENGE 5 -->
+
+    <div class="Container-5">
+        
+   
+        <h2 style="text-align: center; padding-top: 15px;">Challenge 5 : BLACKJACK</h2>
+        <h3 id="result-declare" style="text-align: center; padding-bottom: 15px;">Lets Play!!</h3>
+        <div class="board">
+        <div class="row1"> 
+            
+            <div id="column1" ><h1 style="width: 100%;">You :<span id="me" >0</span></h1></div>
+            <div id="column2" ><h1 style="width: 100%;">Dealer :<span id="you">0</span></h1></div>
+            
+        </div>
+        <div class="row2">
+                <button id="hit" class="btn btn-info btn-lg" onclick="hit()">Hit</button>
+                <button id="stand" class="btn btn-warning btn-lg" onclick="stand()">Stand</button>
+                <button id="deal" class="btn btn-danger btn-lg" onclick="deal()">Deal</button>
+                
+
+        </div>
+        </div>
+        <div id="final-result">
+            <table id="result-box">
+                <tr>
+                    <th><h4>Win</h4></th>
+                    <th><h4>Loss</h4></th>
+                    <th><h4>Draw</h4></th>
+                </tr>
+                <tr>
+                    <td><h3><span id="wins">0</span></h3></td>
+                    <td ><h3><span id="losses">0</span></h3></td>
+                    <td><h3><span id="draw">0</span></h3></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+       
+    </div>
+    <div class="mt-5 col-md-12"></div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
